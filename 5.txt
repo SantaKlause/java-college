@@ -1,0 +1,29 @@
+class Cal{
+static void print(int num1, int num2){
+System.out.println("The numbers are: "+num1+"and"+num2);
+}
+static double add(int num1, int num2){
+return num1+num2;
+}
+static double diff(int num1, int num2){
+return num1-num2;
+}
+static double mul(int num1, int num2){
+return num1*num2;
+}
+static double div(int num1, int num2){
+return num1/num2;
+}
+public static void print() {
+}
+}
+class Calculator{
+public static void main(String[] args) {
+
+Cal.print();
+System.out.println("The Sum is: "+Cal.add(10,2));
+System.out.println("The Difference is: "+Cal.diff(10,2));
+System.out.println("The Multiplication is: "+Cal.mul(10,2));
+System.out.println("The Division is: "+Cal.div(10,2));
+}
+}

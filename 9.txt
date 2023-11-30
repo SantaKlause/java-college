@@ -1,0 +1,29 @@
+class Rectangle{
+double length, breadth;
+Rectangle(double l, double b){
+length=l;
+breadth=b;
+}
+double calArea(){
+return length*breadth;
+}
+}
+class RectBox extends Rectangle{
+double height;
+RectBox(double l, double b, double h){
+super(l,b);
+height=h;
+}
+double calVolume(){
+return calArea()*height;
+}
+}
+class RectVol{
+public static void main(String[] args) {
+RectBox obj=new RectBox(2,3,5);
+double area=obj.calArea();
+double volume=obj.calVolume();
+System.out.println("The Area is: "+area);
+System.out.println("The Volume is: "+volume);
+}
+}

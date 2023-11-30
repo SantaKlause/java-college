@@ -1,0 +1,27 @@
+Main File:
+import Calculator.*;
+class CalculatorMain{
+public static void main(String[] args) {
+calculator cal= new calculator();
+System.out.println("The sum is: "+cal.addition(10.0, 2.0));
+System.out.println("The difference is: "+cal.substraction(10.0, 2.0));
+System.out.println("The product is: "+cal.multiplicatiion(10.0, 2.0));
+System.out.println("The quotient is: "+cal.division(10.0, 2.0));
+}
+}
+
+Package File:
+package Calculator;
+public class calculator{
+public double addition(double a, double b){
+return (a+b);
+}
+public double substraction(double a, double b){
+return (a-b);
+}
+public double multiplicatiion(double a, double b){return (a*b);
+}
+public double division(double a, double b){
+return (a/b);
+}
+}

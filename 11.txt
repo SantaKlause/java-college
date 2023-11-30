@@ -1,0 +1,43 @@
+class Dimension {
+int x;
+int y;
+Dimension(int x,int y)
+{
+this.x=x;
+this.y=y;
+}
+void area(){
+System.out.println("Area is :"+(x*y));
+}
+}
+class Rectangle extends Dimension
+{
+Rectangle(int x,int y)
+{
+super(x,y);
+}
+void area()
+{
+System.out.println("Area of Rectangle is: "+(x*y));
+}
+}
+class Triangle extends Dimension
+{
+Triangle(int x,int y)
+{
+super(x,y);
+}
+void area()
+{
+System.out.println("Area of Tectangle is: "+.5*x*y);
+}
+}
+class DimensionMain
+{
+public static void main(String[] args) {
+Rectangle r1 = new Rectangle(14,10);
+r1.area();
+Triangle t1 = new Triangle(14,7);
+t1.area();
+}
+}

@@ -1,0 +1,69 @@
+class Employee{
+double dAllowance, hrAllowance, mAllowance, basicSal;
+Employee(int b){
+dAllowance=0.45;
+
+hrAllowance=0.15;
+mAllowance=500;
+basicSal=b;
+}
+double regularSalary(){
+return basicSal+(basicSal*dAllowance)+(basicSal*hrAllowance)+mAllowance;
+}
+}
+class Scientist extends Employee{
+double bonusPerPub, noOfPubs;
+Scientist(int b, int np){
+super(b);
+bonusPerPub=1000;
+noOfPubs=np;
+}
+double netBonus(){
+return bonusPerPub*noOfPubs;
+}
+double netSalary(){
+return regularSalary()+netBonus();
+}
+}
+class Developer extends Employee{
+double bonusPerPat, noOfPats;
+Developer(int b, int np){
+super(b);
+bonusPerPat=5000;
+noOfPats=np;
+}
+double netBonus(){
+return bonusPerPat*noOfPats;
+}
+double netSalary(){
+return regularSalary()+netBonus();
+}
+}
+class ProjectLeader extends Employee{
+double bonusPerProj, noOfProjs;
+ProjectLeader(int b, int np){
+super(b);
+bonusPerProj=3000;
+noOfProjs=np;
+}
+double netBonus(){
+return bonusPerProj*noOfProjs;
+}
+double netSalary(){
+
+return regularSalary()+netBonus();
+}
+}
+class Salary{
+public static void main(String[] args) {
+Scientist sc=new Scientist(100000,5);
+double scientistSalary=sc.netSalary();
+System.out.println("The net salary of the Scientist is: "+scientistSalary);
+Developer dv=new Developer(500000,15);
+double developerSalary=dv.netSalary();
+System.out.println("The net salary of the Developer is: "+developerSalary);
+ProjectLeader pl=new ProjectLeader(300000,10);
+double projectleaderSalary=pl.netSalary();
+System.out.println("The net Salary of the Project Leader is: "+projectleaderSalary);
+}
+}s

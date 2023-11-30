@@ -1,0 +1,29 @@
+class Series
+{
+int range,a,b;
+Series(int n)
+{
+range=n;
+a=0;
+b=1;
+}
+void printSeries()
+{
+System.out.print(a+" "+b+" ");
+for(int i=2;i<range;i++)
+{
+int c=a+b;
+System.out.print(c+" ");
+a=b;
+b=c;
+}
+}
+}
+class Fibonacci
+{
+public static void main(String[] args)
+{
+Series obj=new Series(7);
+obj.printSeries();
+}
+}

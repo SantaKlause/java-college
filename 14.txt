@@ -1,0 +1,27 @@
+interface volume{
+double pi =3.14;
+double CalVolume(double radius, double height);
+}
+class Cylinder implements Volume{
+public double CalVolume(double radius, double height)
+{
+return (pi*radius*radius*height);
+}
+}
+class Cone implements Volume{
+public double CalVolume(double radius, double height)
+{
+return (pi*radius*radius*height/3.0);
+}
+}
+class Cyl_Con_Vol{
+public static void main(String[] args) {
+Cylinder Cyl=new Cylinder();
+Cone Con=new Cone();
+Volume V;
+V=Cyl;
+System.out.println("Volume of Cylinder is: "+V.CalVolume(10.5,8.2));
+V=Con;
+System.out.println("Volume of Cone is: "+V.CalVolume(9.8,8.5));
+}
+}

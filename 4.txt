@@ -1,0 +1,26 @@
+class Calculate{
+double volume, radius, height;
+Calculate(){
+//Default constructor
+volume=0;
+}
+Calculate(double r, double h){
+//Parameterised constructor
+radius=r;
+height=h;
+volume=0;
+}
+double calcVolume(){
+volume=(3.14*radius*radius*height)/3;
+
+return volume;
+}
+}
+class Cone {
+public static void main(String[] args) {
+Calculate obj1=new Calculate();
+Calculate obj2=new Calculate(9,17);
+double volume=obj2.calcVolume();
+System.out.println("Volume of Cone: "+volume);
+}
+}

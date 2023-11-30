@@ -1,0 +1,58 @@
+class Operations
+{
+int[] stack=new int[5];
+int top=-1;
+void printStack()
+{
+for(int i=0;i<=top;i++)
+{
+System.out.print(stack[i]+" ");
+}
+System.out.println("Top: "+top);
+}
+void push(int value)
+{
+if (top==4)
+{
+System.out.println("Stack Overflow!");
+}
+else
+{
+top++;
+stack[top]=value;
+}
+}
+void pop()
+{
+if (top==-1)
+{
+System.out.println("Stack Underflow!");
+}
+else
+{
+stack[top]=0;
+top--;
+}
+}
+}
+class Stack
+{
+public static void main(String[] args)
+{
+Operations obj=new Operations();
+obj.push(1);
+obj.push(2);
+obj.push(3);
+obj.push(4);
+obj.push(5);
+System.out.println("Current Stack: ");
+obj.printStack();
+System.out.println("Pushing 6 to Stack: ");
+obj.push(6);
+obj.printStack();
+System.out.println("Popping from the Stack: ");
+obj.pop();
+System.out.println("Current Stack: ");
+obj.printStack();
+}
+}

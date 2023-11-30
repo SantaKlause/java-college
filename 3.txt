@@ -1,0 +1,25 @@
+class calculate
+{
+double calvolume(double side)
+{
+return side*side*side;
+}
+double calvolume(double length, double breadth, double height)
+{
+return length*breadth*height;
+}
+double calvolume(double radius, double height)
+{
+return 3.14*radius*radius*height;
+}
+}
+class volume
+{
+public static void main(String[] args)
+{
+calculate obj=new calculate();
+System.out.println("Volume of cube: "+obj.calvolume(3));
+System.out.println("Volume of rectangle: "+obj.calvolume(3,4,6));
+System.out.println("Volume of cylinder: "+obj.calvolume(3,4));
+}
+}

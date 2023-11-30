@@ -1,0 +1,49 @@
+class BoxWeight extends Box{
+int w;
+BoxWeight(int l,int b,int h,int w )
+{
+super(l,b,h);
+this.w=w;
+}
+}
+public class Box
+{
+int l,b,h;
+Box(int l,int b,int h)
+{
+this.l=l;
+this.b=b;
+this.h=h;
+}
+int volume()
+{
+return l*b*h;
+}
+}
+class Shipment extends BoxWeight
+{
+int cpv,cpw;
+Shipment(int l,int b,int h,int w,int cpv,int cpw) {
+super(l, b, h, w);
+this.cpv = cpv;
+this.cpw = cpw;
+}
+int shipmentCostPerVolume()
+{
+return cpv*volume();
+}
+int shipmentCostPerWeight()
+{
+return cpw*w;
+}
+}
+class Parcel
+{
+public static void main(String[] args) {
+Shipment obj = new Shipment(12,8,5,900,5,3);
+System.out.println("Shipping cost of the parcel wrt Volume = "
++obj.shipmentCostPerVolume());
+System.out.println("Shipping cost of the parcel wrt Weight =
+"+obj.shipmentCostPerWeight());
+}
+}

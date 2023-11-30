@@ -1,0 +1,60 @@
+class MatrixOps
+{
+int[][]calculate(int[][]a, int[][]b)
+{
+int row1=a.length;
+int row2=b.length;
+int col1=a[0].length;
+int col2=b[0].length;
+int[][]ans=new int[row1][col2];
+for(int i=0;i<row1;i++)
+{
+for(int j=0;j<col2;j++)
+{
+ans[i][j]=0;
+for(int k=0;k<col1;k++)
+{
+ans[i][j]+=a[i][k]*b[k][j];
+}
+}
+}
+return ans;
+}
+void printMatrix(int[][]mat)
+{
+for(int i=0;i<mat.length;i++)
+{
+for(int j=0;j<mat[i].length;j++)
+{
+System.out.print(mat[i][j]+" ");
+}
+System.out.println();
+}
+}
+}
+class Matrix
+{
+public static void main(String[] args) {
+int[][]mat1=new int[][]
+{
+{3,5,9,3},
+{7,2,8,5},
+{1,4,6,7}
+};
+int[][]mat2=new int[][]
+{
+{9,7},
+{5,1},
+{2,6},
+{3,4}
+};
+MatrixOps obj=new MatrixOps();
+int ans[][]=obj.calculate(mat1, mat2);
+System.out.println("The first matrix is: ");
+obj.printMatrix(mat1);
+System.out.println("The second matrix is: ");
+obj.printMatrix(mat2);
+System.out.println("The product of the two matrices are: ");
+obj.printMatrix(ans);
+}
+}

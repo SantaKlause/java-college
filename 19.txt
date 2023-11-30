@@ -1,0 +1,24 @@
+Java File:
+import java.awt.*;
+import java.applet.*;
+public class Home extends Applet{
+public void paint(Graphics g){
+int[] x = {150,300,225};
+int[] y = {150,150,25};
+g.drawRect(150,150,150,300);
+g.drawRect(200,200,50,150);
+g.drawOval(200,75,50,50);
+g.drawPolygon(x,y,3);
+}
+}
+HTML File:
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+
+</head>
+<body>
+<applet code="Home.class" width="1200" height="1200"></applet>
+</body>
+</html>

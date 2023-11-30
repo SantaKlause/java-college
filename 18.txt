@@ -1,0 +1,34 @@
+import java.util.*;
+import java.lang.Exception;
+class NegativeException extends Exception{
+NegativeException(String str){
+super(str);
+}
+}
+class Substraction{
+void sub(int a,int b) throws NegativeException {
+if(a<b){
+throw new NegativeException("Not allowed!");
+}else{
+System.out.println("Difference is: "+(a-b));
+}
+}
+}
+class Suberror extends Substraction{
+public static void main(String[] args) throws NegativeException{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter first number:");
+int a=sc.nextInt();
+
+System.out.println("Enter second number:");
+int b=sc.nextInt();
+Substraction obj=new Substraction();
+try{
+obj.sub(a,b);
+}
+catch(NegativeException e)
+{
+System.out.println("Exception Occurred: "+e);
+}
+}
+}
